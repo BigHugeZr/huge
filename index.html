@@ -1,13 +1,211 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=0.7">
     <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        
+        .ren2 {
+            animation: zou .3s linear infinite alternate;
+        }
+        
+        @keyframes zou {
+            from {
+                transform: translateY(-100px);
+            }
+            to {
+                transform: translateX(0);
+            }
+        }
+        
+        .mao {
+            position: absolute;
+            left: -612px;
+            top: 300px;
+            width: 690px;
+            height: 240px;
+            transform-origin: right top;
+            transition: all 8s;
+            animation-name: move;
+            animation-duration: 1ms;
+            animation-iteration-count: infinite;
+        }
+        
+        @keyframes move {
+            from {
+                transform: rotate(75deg);
+            }
+            to {
+                transform: rotate(0);
+            }
+        }
+        /* .mao:hover {
+            transform: rotate(-7200deg);
+        } */
+        
+        .maotou {
+            position: absolute;
+            left: 10px;
+            bottom: 20px;
+            margin-left: 50px;
+            width: 200px;
+            height: 100px;
+            border: 1px solid #000000;
+            border-radius: 100px 100px 0 0;
+            background-color: green;
+        }
+        
+        .maoyan {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            height: 20px;
+            width: 300px;
+            border: 1px solid #000000;
+            background-color: green;
+        }
+        
+        .koushou {
+            position: absolute;
+            right: 0;
+            bottom: 30px;
+            height: 50px;
+            width: 490px;
+            border: 1px solid #000000;
+            border-radius: 8px;
+            transform: rotate(-20deg);
+            transform-origin: left bottom;
+        }
+        
+        .ren_tou {
+            margin-left: 110px;
+            width: 200px;
+            height: 200px;
+            border: 1px solid #000000;
+            border-radius: 50%;
+        }
+        
+        .ren_jin {
+            margin-left: 185px;
+            width: 50px;
+            height: 70px;
+            border: 1px solid #000000;
+        }
+        
+        .ren_shen {
+            margin-left: 50px;
+            width: 320px;
+            height: 520px;
+            border: 1px solid #000000;
+            border-radius: 8px;
+        }
+        
+        .ren_shou1 {
+            position: absolute;
+            left: 0;
+            top: 300px;
+            height: 490px;
+            width: 50px;
+            border: 1px solid #000000;
+            border-radius: 8px;
+            transform-origin: right top;
+            transform: rotate(10deg);
+        }
+        
+        .ren_shou2 {
+            position: absolute;
+            right: 0;
+            top: 300px;
+            height: 490px;
+            width: 50px;
+            border: 1px solid #000000;
+            border-radius: 8px;
+            transform-origin: left top;
+            transform: rotate(-10deg);
+        }
+        
+        .ren_tui1 {
+            margin-left: 120px;
+            height: 540px;
+            width: 50px;
+            border: 1px solid #000000;
+            border-radius: 8px;
+        }
+        
+        .ren_tui2 {
+            position: absolute;
+            right: 120px;
+            bottom: 0;
+            height: 540px;
+            width: 50px;
+            border: 1px solid #000000;
+            border-radius: 8px;
+        }
+        
+        .beikou {
+            float: left;
+            position: relative;
+            margin: 600px 0 0 400px;
+            height: 1340px;
+            width: 420px;
+        }
+        
+        .ren2 {
+            float: left;
+            position: relative;
+            right: 160px;
+            top: -420px;
+        }
+        
+        .beikou span {
+            position: absolute;
+            left: 180px;
+            top: 150px;
+            font-size: 30px;
+            font-weight: 700;
+        }
+        
+        div {
+            font-size: 50px;
+        }
+    </style>
 </head>
 
 <body>
+    <div>鼠标移动到拿帽子的肩膀处,CTRL+滚轮缩小观看更佳</div>
+    <div class="ren">
+        <div class="beikou">
+            <div class="ren_tou"><span>桑</span></div>
+            <div class="ren_jin"></div>
+            <div class="ren_shen"></div>
+            <div class="ren_shou1"></div>
+            <div class="ren_shou2"></div>
+            <div class="ren_tui1"></div>
+            <div class="ren_tui2"></div>
+        </div>
+        <div class="ren2">
+            <div class="beikou">
+                <div class="ren_tou"></div>
+                <div class="ren_jin"></div>
+                <div class="ren_shen"></div>
+                <div class="mao">
+                    <div class="maotou"></div>
+                    <div class="maoyan"></div>
+                    <div class="koushou"></div>
+                </div>
+                <div class="ren_shou2"></div>
+                <div class="ren_tui1"></div>
+                <div class="ren_tui2"></div>
+            </div>
+        </div>
+        <div class="kou"></div>
+        <div class="kouren"></div>
 
 </body>
 
